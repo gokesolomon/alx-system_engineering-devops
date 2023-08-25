@@ -11,3 +11,18 @@ Create a screenshot, showing that you completed the required levels
 Push this screenshot with the right name to GitHub, in either the PNG or JPEG format
 
 I will be doing the tasks and attached my screenshots as an evidence.
+
+I opened gitbash 
+cdto root
+I pasted username@hostname, then input password
+I cd to my project directory
+pwd to confirm my working directory
+lpwd to confirm local working directory 
+lcd to cd to where my screenshots are saved
+lls to list them
+pu "name of the saved picture"
+then enter
+exit sftp, then git add, commit and push.
+the git pull on my sandbox.
+
+end.
