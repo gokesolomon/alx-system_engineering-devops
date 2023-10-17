@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Configure Nginx so that its HTTP response contains
+# a custom header
+#Installs and configures HAproxy in a load balancer server
+
+sudo apt-get install -y haproxy
+
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
+
+cat <<EOT | sudo tee -a /etc/haproxy/haproxy.cfg
+frontend gokesolomon.tech
+    timeout client  30000
+    bind 0:80
+    default_backend gokesolomon.tech_backend
+
+backend gokehsolomon.tech_backend
+    timeout connect  3000
+    timeout server  30000
+    balance roundrobin
+
+    server 250266-web-01 52.87.255.159:80 check
+    server 250266-web-02 18.210.33.159:80 check
+" >> /etc/haproxy/haproxy.cfg
+
+sudo service haproxy start
+    server 250266-web-01 52.87.255.159:80 check
+    server 250266-web-02 18.210.33.159:80 check
+" >> /etc/haproxy/haproxy.cfg
+
+service haproxy start
+

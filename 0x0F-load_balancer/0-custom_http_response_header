@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 #Installs Nginx with the following configurations:
 #Listens on port 80
+=======
+# Installs Nginx with the following configurations:
+#Listens on port 80.
+#Returns a page containing "Hello World" when querie
+>>>>>>> 39c79d2b9eabba9dcbf45f8e7db7ca09fe1f1041
 
 apt-get update
 apt-get install -y nginx
