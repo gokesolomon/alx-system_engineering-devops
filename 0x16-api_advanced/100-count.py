@@ -9,6 +9,7 @@ def count_words(subreddit, word_list, after='', word_dict={}):
     Javascript should count as javascript, but java should not).
     If no posts match or the subreddit is invalid, it prints nothing.
     """
+
     if not word_dict:
         for word in word_list:
             if word.lower() not in word_dict:
